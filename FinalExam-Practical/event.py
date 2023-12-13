@@ -24,15 +24,21 @@ class Events:
         eventList = {'Event ID' : eventID, 'Event Location' : eventLocation, 'Category' : category}
         super.event[eventType].append(eventList)
         super.saveDatatoFile()
-        print(f'{eventType} has been added to Events!')
+        print(f'{eventType} has been added to {eventType}s!')
         
 
     def calculateEventFee():
         Fee = 0
-        eventFee = Fee * 1.13
+        eventFee = float(Fee * 1.13)
         return eventFee
     
-
+    def listEvents(events_file, event):
+        items = event[super.eventType]
+        if not items:
+            print(f'{super.EventType} not found')
+        else:
+            for i, item in enumerate(items, start=1):
+                print(f'{super.EventType} {i}: {item}')
 
 
 
