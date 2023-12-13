@@ -23,7 +23,7 @@ class Events:
     def add_event(eventType , eventID = str, eventLocation = str, fee = float):
         eventList = {'Event ID' : eventID, 'Event Location' : eventLocation, 'Fee' : fee}
         super(Events.event).event[eventType].append(eventList)
-        super(Events.saveDatatoFile).saveDatatoFile()
+        super().saveDatatoFile()
         print(f'{eventType} has been added to {eventType}s!')
         
 
